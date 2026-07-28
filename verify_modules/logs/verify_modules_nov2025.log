@@ -1,0 +1,83 @@
+=== START 2026-07-28T22:29:04+0900 on idark ===
+Reporting git state from worktrees for run 'nov2025': /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025
+
+=== datamodel (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/datamodel) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/datamodel
+Remote: https://github.com/Subaru-PFS/datamodel.git
+Branch: DETACHED
+Commit: 00e9a4f
+Exact tag at HEAD: w.2025.41
+
+=== pfs_utils (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/pfs_utils) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/pfs_utils
+Remote: https://github.com/Subaru-PFS/pfs_utils.git
+Branch: DETACHED
+Commit: d24ec63
+Exact tag at HEAD: w.2025.41
+
+=== ics_cobraOps (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ics_cobraOps) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ics_cobraOps
+Remote: https://github.com/Subaru-PFS/ics_cobraOps.git
+Branch: DETACHED
+Commit: 682e835
+Exact tag at HEAD: 2.0.1
+
+=== ics_cobraCharmer (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ics_cobraCharmer) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ics_cobraCharmer
+Remote: https://github.com/Subaru-PFS/ics_cobraCharmer.git
+Branch: DETACHED
+Commit: cd8eef1
+Exact tag at HEAD: 1.4.19
+
+=== ets_fiberalloc (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ets_fiberalloc) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ets_fiberalloc
+Remote: https://github.com/Subaru-PFS/ets_fiberalloc.git
+Branch: DETACHED
+Commit: 7c71323
+Exact tag at HEAD: v3.2
+
+=== pfs_instdata (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/pfs_instdata) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/pfs_instdata
+Remote: https://github.com/Subaru-PFS/pfs_instdata.git
+Branch: DETACHED
+Commit: d26b3b7
+Exact tag at HEAD: 1.8.50
+
+Git tag verification failures: 0
+
+=========================================================
+Running import_modules.py
+CWD before run: /lustre/work/jingjing.shi/subaru_netflow_env
+Environment snapshot:
+  PATH=/home/jingjing.shi/anaconda3/envs/netflow-base-2026-07/bin:/home/jingjing.shi/.pyenv/shims:/home/jingjing.shi/.pyenv/bin:/home/jingjing.shi/local/node20/bin:/usr/bin:/home/jingjing.shi/hdf5/bin:/home/jingjing.shi/.pyenv/plugins/pyenv-virtualenv/shims:/home/jingjing.shi/.pyenv/bin:/opt/intel/psxe2018/compilers_and_libraries_2018.5.274/linux/mpi/intel64/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/bin/intel64:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:/opt/intel/psxe2019/debugger_2019/gdb/intel64/bin:/opt/local/bin:/home/anaconda3/condabin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/opt/pbs/bin:/opt/intel/psxe2019/parallel_studio_xe_2019.5.075/bin:/usr/bin
+  CONDA_PREFIX=/home/jingjing.shi/anaconda3/envs/netflow-base-2026-07
+  PFS_INSTDATA_DIR=/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/pfs_instdata
+Python 3.12.11
+[OK] numpy
+   path: /home/jingjing.shi/anaconda3/envs/netflow-base-2026-07/lib/python3.12/site-packages/numpy/__init__.py
+   version: 2.3.3
+------------------------------------------------------------
+[OK] ics.cobraOps
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ics_cobraOps/python/ics/cobraOps/__init__.py
+   version: 2.0.1
+------------------------------------------------------------
+[OK] pfs.utils
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/pfs_utils/python/pfs/utils/__init__.py
+------------------------------------------------------------
+[OK] ics.cobraCharmer
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ics_cobraCharmer/python/ics/cobraCharmer/__init__.py
+------------------------------------------------------------
+[OK] pfs.datamodel
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/datamodel/python/pfs/datamodel/__init__.py
+   version: unknown
+------------------------------------------------------------
+[OK] ets_fiber_assigner
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/nov2025/ets_fiberalloc/ets_fiber_assigner/__init__.py
+   version: 3.2.0
+------------------------------------------------------------
+[OK] opdb
+   path: /home/jingjing.shi/anaconda3/envs/netflow-base-2026-07/lib/python3.12/site-packages/opdb/__init__.py
+------------------------------------------------------------
+All required modules imported successfully.
+import_modules.py exit code: 0
+=== END 2026-07-28T22:29:06+0900 ===

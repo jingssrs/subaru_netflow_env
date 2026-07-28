@@ -1,0 +1,8 @@
+# netflow base env snapshot
+# frozen:   2026-07-28T06:21:24Z
+# host:     idark
+# env name: netflow-base-2026-07
+# cloned from: /home/jingjing.shi/anaconda3/envs/netflow-env
+# python:   Python 3.12.11
+# stripped PFS modules: ets_fiber_assigner ics-cobraCharmer ics-cobraOps pfs-datamodel pfs-instdata pfs-utils
+# stripped at: 2026-07-28T06:27:00Z

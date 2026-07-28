@@ -46,22 +46,64 @@ git clone <this-repo-url> /lustre/work/jingjing.shi/subaru_netflow_env
 export NETFLOW_ENV_DIR=/lustre/work/jingjing.shi/subaru_netflow_env
 ```
 
-## Consume from any repo
+## Using a run (everyone / teammates)
 
-From inside any science repo, run its work against a pinned environment:
+Once a run has been **prepared** (its base env frozen and its worktrees created
+— done once by the maintainer, see "Preparing a run" below), anyone just
+activates it and works. This is identical for the already-set-up runs
+(`nov2025`, `jan2026`, `july2026`) and for any future run.
+
+**One-time per user:**
 
 ```bash
-# once per run: create the worktrees for the tags in runs/<run>/modules.txt
-bash "$NETFLOW_ENV_DIR/make_run_worktrees.sh" <run>
-
-# every session: activate (self-sources conda; no prior `conda activate` needed)
-source "$NETFLOW_ENV_DIR/activate_run.sh" <run>
-
-# then run your repo's code / verification as usual
+# in your ~/.bashrc, so every session/repo finds the toolkit:
+export NETFLOW_ENV_DIR=/lustre/work/jingjing.shi/subaru_netflow_env
 ```
 
-`activate_run.sh` only sets the conda env + `PYTHONPATH` + `PFS_INSTDATA_DIR`,
-so it is completely repo-agnostic — the same command works from every repo.
+You also need read access to two shared, machine-global things the maintainer
+set up (granted via ACLs, e.g. pfs_co_fa/setup_shared_access.sh): the base
+conda env (in the maintainer's `anaconda3/envs`) and the worktrees (under
+`$SUBARU_PFS_DIR/.worktrees`). Nothing to copy or build.
+
+**Every session, from any repo:**
+
+```bash
+# see which runs exist
+bash "$NETFLOW_ENV_DIR/list_runs.sh"
+
+# activate one -- sets the run's base conda env + PYTHONPATH + PFS_INSTDATA_DIR
+# (self-sources conda; no prior `conda activate` needed)
+source "$NETFLOW_ENV_DIR/activate_run.sh" <run>          # e.g. july2026
+
+# optional sanity check: modules should resolve to the worktrees
+bash "$NETFLOW_ENV_DIR/verify_modules.sh" --runname '<run>_check'
+
+# then run your repo's own code as usual
+```
+
+That is the whole workflow for users — **no worktree creation, no freezing**;
+those are already done. `activate_run.sh` is repo-agnostic, so the same command
+works from every repo.
+
+## Preparing a run (maintainer, once per run)
+
+Only the person setting up a run does this; afterwards everyone just activates
+it as above. Works the same for a brand-new future run.
+
+```bash
+# 1. record the run's module tags (follow the observatory's tags for the run)
+$EDITOR "$NETFLOW_ENV_DIR/runs/<run>/modules.txt"
+
+# 2. make sure the base env is current (freeze a new one only if it drifted --
+#    see "Check whether the base drifted" and "First-time base setup" below)
+
+# 3. create the tagged worktrees for the run
+bash "$NETFLOW_ENV_DIR/make_run_worktrees.sh" <run>
+
+# 4. (recommended) activate + verify, then commit runs/<run>/modules.txt
+source "$NETFLOW_ENV_DIR/activate_run.sh" <run>
+bash   "$NETFLOW_ENV_DIR/verify_modules.sh" --runname '<run>'
+```
 
 `verify_modules.sh` lives here too — it checks the shared Subaru-PFS stack and
 worktrees, so every repo uses the same one. Each repo keeps only its own
@@ -85,6 +127,22 @@ bash "$NETFLOW_ENV_DIR/strip_pfs_from_base.sh" 2026-07   # if PFS modules leaked
 conda activate netflow-env
 bash "$NETFLOW_ENV_DIR/freeze_base_env.sh" --check 2026-07
 ```
+
+- **UNCHANGED** — your working env still matches `netflow-base-2026-07`. Nothing
+  to do; reuse it and just record the run's module tags.
+- **CHANGED** (prints a diff, exits non-zero) — the deps have moved since that
+  base was frozen. Cut a **new** base version and point the new run's manifest
+  at it (leave the old base untouched so past runs stay reproducible):
+
+  ```bash
+  # freeze the current working env as a new base (pick a new version label)
+  CONDA_ENVS_ROOT=/home/jingjing.shi/anaconda3/envs \
+      bash "$NETFLOW_ENV_DIR/freeze_base_env.sh" 2026-10
+  bash "$NETFLOW_ENV_DIR/strip_pfs_from_base.sh" 2026-10   # if PFS modules leaked in
+
+  # then set base_env in the new run's manifest:
+  #   base_env   netflow-base-2026-10
+  ```
 
 ## Reproduce a past run
 

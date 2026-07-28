@@ -63,9 +63,11 @@ source "$NETFLOW_ENV_DIR/activate_run.sh" <run>
 `activate_run.sh` only sets the conda env + `PYTHONPATH` + `PFS_INSTDATA_DIR`,
 so it is completely repo-agnostic — the same command works from every repo.
 
-Each repo keeps its own **verification and output tooling** (e.g. `pfs_co_fa`
-keeps `src_py/verify_modules.sh`, `make_reprotest_config.sh`,
-`compare_observatory.py`) — those know about that repo's configs and outputs.
+`verify_modules.sh` lives here too — it checks the shared Subaru-PFS stack and
+worktrees, so every repo uses the same one. Each repo keeps only its own
+**output tooling** that knows about that repo's configs/outputs (e.g.
+`pfs_co_fa` keeps `env_tools/make_reprotest_config.sh` and
+`env_tools/compare_observatory.py`).
 
 ## First-time base setup
 

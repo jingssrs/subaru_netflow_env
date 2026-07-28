@@ -9,7 +9,7 @@
 #   source env_setup_base.sh 2026-07    # -> netflow-base-<version>
 #
 # NOTE: this activates ONLY the base conda env (no Subaru-PFS modules).
-#       For an actual observation run, use env_tools/activate_run.sh <run>,
+#       For an actual observation run, use activate_run.sh <run>,
 #       which activates the base AND puts the run's module worktrees on
 #       PYTHONPATH.
 

@@ -68,7 +68,7 @@ if [[ ! -d "$Subaru_PFS" && -d "$script_dir/../../Subaru-PFS" ]]; then
   Subaru_PFS="$(cd "$script_dir/../../Subaru-PFS" && pwd)"
 fi
 
-# Prefer the per-run git worktrees created by env_tools/make_run_worktrees.sh
+# Prefer the per-run git worktrees created by make_run_worktrees.sh
 # so we report the git state of exactly what is on PYTHONPATH for this run.
 # Falls back to the canonical clones when no worktrees exist for this runname.
 MODSETS_ROOT="${MODSETS_ROOT:-$Subaru_PFS/.worktrees}"

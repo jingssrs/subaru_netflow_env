@@ -82,4 +82,4 @@ fi
 echo
 echo "==> Done. Re-verify that run modules now resolve to the worktrees:"
 echo "    source $NETFLOW_ENV_DIR/activate_run.sh <run>"
-echo "    bash src_py/verify_modules.sh --runname '<run>_check'"
+echo "    bash \"\$NETFLOW_ENV_DIR/verify_modules.sh\" --runname '<run>_check'"

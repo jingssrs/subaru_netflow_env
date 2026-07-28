@@ -1,0 +1,24 @@
+# nov2025 environment manifest
+# Source of tags: verify_modules/logs/verify_modules_nov2025.log
+#
+# To run this run:
+#   bash   "$NETFLOW_ENV_DIR/make_run_worktrees.sh" nov2025
+#   source "$NETFLOW_ENV_DIR/activate_run.sh" nov2025
+#   bash   "$NETFLOW_ENV_DIR/verify_modules.sh" --runname 'nov2025'
+#
+# base_env: this run's base was never frozen, so we deliberately run it
+#   against the shared netflow-base-2026-07 base + the nov2025 module tags
+#   below. NOTE: not the exact original base (Gurobi/numpy etc. may differ),
+#   so outputs may not bit-match the original nov2025 run; the module layer
+#   is pinned exactly.
+# NOTE: the nov2025 log reported ics_cobraOps as "2.0.1-dirty" (working tree
+#   had uncommitted changes); the tag at HEAD was 2.0.1.
+base_env            netflow-base-2026-07
+#
+# module            git-tag
+datamodel           w.2025.41
+pfs_utils           w.2025.41
+ics_cobraOps        2.0.1
+ics_cobraCharmer    1.4.19
+ets_fiberalloc      v3.2
+pfs_instdata        1.8.50

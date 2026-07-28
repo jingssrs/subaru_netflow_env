@@ -1,0 +1,22 @@
+# jan2026 environment manifest
+# Source of tags: verify_modules/logs/verify_modules_jan2026.log
+#
+# To run this run:
+#   bash   "$NETFLOW_ENV_DIR/make_run_worktrees.sh" jan2026
+#   source "$NETFLOW_ENV_DIR/activate_run.sh" jan2026
+#   bash   "$NETFLOW_ENV_DIR/verify_modules.sh" --runname 'jan2026'
+#
+# base_env: this run's base was never frozen, so we deliberately run it
+#   against the shared netflow-base-2026-07 base + the jan2026 module tags
+#   below. NOTE: this is not the exact original base (e.g. Gurobi/numpy
+#   versions may differ), so outputs may not bit-match the original jan2026
+#   run; the module layer, however, is pinned exactly.
+base_env            netflow-base-2026-07
+#
+# module            git-tag
+datamodel           w.2025.50a
+pfs_utils           w.2025.49
+ics_cobraOps        v2.0.4
+ics_cobraCharmer    1.4.24
+ets_fiberalloc      v3.2
+pfs_instdata        1.8.64

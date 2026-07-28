@@ -1,0 +1,9 @@
+# Transient worktree checkouts (default live outside this repo, under
+# $SUBARU_PFS_DIR/.worktrees); ignore any that land inside it.
+/.worktrees/
+**/.worktrees/
+
+# OS cruft
+.DS_Store
+
+# Tracked on purpose: runs/ (manifests) and base/ (frozen base specs).

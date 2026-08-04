@@ -38,13 +38,22 @@ Override any path via env vars: `SUBARU_PFS_DIR` (canonical module clones),
 `MODSETS_ROOT` (worktree location), `NETFLOW_ENV_DIR` (this toolkit's root),
 `CONDA_SH` (conda init script).
 
-## Install once (per cluster)
+## Install once (per user)
+
+Clone this repo **anywhere you like** — your own folder is fine — and point
+`NETFLOW_ENV_DIR` at it in your shell rc:
 
 ```bash
-git clone <this-repo-url> /lustre/work/jingjing.shi/subaru_netflow_env
-# add to your shell rc so every repo/session can find it:
-export NETFLOW_ENV_DIR=/lustre/work/jingjing.shi/subaru_netflow_env
+git clone https://github.com/jingssrs/subaru_netflow_env.git <your_path>/subaru_netflow_env
+export NETFLOW_ENV_DIR=<your_path>/subaru_netflow_env
 ```
+
+The toolkit only holds scripts + run manifests, so its location is your choice
+and can differ per user. What must be **shared** are the runtime artifacts it
+points at — the base conda env and the worktrees — which live at machine-global
+paths (`anaconda3/envs` and `SUBARU_PFS_DIR/.worktrees`) and are created once by
+the maintainer. Leave `SUBARU_PFS_DIR`/`MODSETS_ROOT` at their defaults and just
+ensure you have read access to those.
 
 ## Using a run (everyone / teammates)
 
@@ -57,7 +66,7 @@ activates it and works. This is identical for the already-set-up runs
 
 ```bash
 # in your ~/.bashrc, so every session/repo finds the toolkit:
-export NETFLOW_ENV_DIR=/lustre/work/jingjing.shi/subaru_netflow_env
+export NETFLOW_ENV_DIR=<your_path>/subaru_netflow_env
 ```
 
 You also need read access to two shared, machine-global things the maintainer

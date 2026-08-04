@@ -1,0 +1,144 @@
+=== START 2026-08-04T11:16:54+0900 on idark ===
+Reporting git state from worktrees for run 'sep2026': /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026
+
+=== datamodel (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/datamodel) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/datamodel
+Remote: https://github.com/Subaru-PFS/datamodel.git
+Branch: DETACHED
+Commit: 24aa699
+Exact tag at HEAD: w.2026.31
+
+=== pfs_utils (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_utils) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_utils
+Remote: https://github.com/Subaru-PFS/pfs_utils.git
+Branch: DETACHED
+Commit: 441699f
+Exact tag at HEAD: w.2026.31
+
+=== ics_cobraOps (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraOps) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraOps
+Remote: https://github.com/Subaru-PFS/ics_cobraOps.git
+Branch: DETACHED
+Commit: 2ba0bb2
+Exact tag at HEAD: v2.0.7
+
+=== ics_cobraCharmer (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraCharmer) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraCharmer
+Remote: https://github.com/Subaru-PFS/ics_cobraCharmer.git
+Branch: DETACHED
+Commit: d53374a
+Exact tag at HEAD: 1.5.7
+
+=== ets_fiberalloc (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ets_fiberalloc) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ets_fiberalloc
+Remote: https://github.com/Subaru-PFS/ets_fiberalloc.git
+Branch: DETACHED
+Commit: 2248bf8
+Exact tag at HEAD: v3.8
+
+=== pfs_instdata (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_instdata) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_instdata
+Remote: https://github.com/Subaru-PFS/pfs_instdata.git
+Branch: DETACHED
+Commit: 434af74
+Exact tag at HEAD: 1.8.88
+
+Git tag verification failures: 0
+
+=========================================================
+Running import_modules.py
+CWD before run: /lustre/work/jingjing.shi/subaru_netflow_env
+Environment snapshot:
+  PATH=/home/jingjing.shi/.pyenv/shims:/home/jingjing.shi/.pyenv/bin:/home/jingjing.shi/local/node20/bin:/usr/bin:/home/jingjing.shi/hdf5/bin:/home/jingjing.shi/.pyenv/plugins/pyenv-virtualenv/shims:/home/jingjing.shi/.pyenv/bin:/opt/intel/psxe2018/compilers_and_libraries_2018.5.274/linux/mpi/intel64/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/bin/intel64:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:/opt/intel/psxe2019/debugger_2019/gdb/intel64/bin:/opt/local/bin:/home/jingjing.shi/anaconda3/bin:/home/anaconda3/condabin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/opt/pbs/bin:/opt/intel/psxe2019/parallel_studio_xe_2019.5.075/bin:/usr/bin
+  CONDA_PREFIX=/home/jingjing.shi/anaconda3
+  PFS_INSTDATA_DIR=<unset>
+Python 2.7.5
+  File "import_modules.py", line 9
+    print(f"[OK] {name}")
+                       ^
+SyntaxError: invalid syntax
+import_modules.py exit code: 1
+=== END 2026-08-04T11:16:54+0900 ===
+=== START 2026-08-04T11:28:53+0900 on idark ===
+Reporting git state from worktrees for run 'sep2026': /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026
+
+=== datamodel (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/datamodel) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/datamodel
+Remote: https://github.com/Subaru-PFS/datamodel.git
+Branch: DETACHED
+Commit: 24aa699
+Exact tag at HEAD: w.2026.31
+
+=== pfs_utils (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_utils) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_utils
+Remote: https://github.com/Subaru-PFS/pfs_utils.git
+Branch: DETACHED
+Commit: 441699f
+Exact tag at HEAD: w.2026.31
+
+=== ics_cobraOps (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraOps) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraOps
+Remote: https://github.com/Subaru-PFS/ics_cobraOps.git
+Branch: DETACHED
+Commit: 2ba0bb2
+Exact tag at HEAD: v2.0.7
+
+=== ics_cobraCharmer (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraCharmer) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraCharmer
+Remote: https://github.com/Subaru-PFS/ics_cobraCharmer.git
+Branch: DETACHED
+Commit: d53374a
+Exact tag at HEAD: 1.5.7
+
+=== ets_fiberalloc (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ets_fiberalloc) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ets_fiberalloc
+Remote: https://github.com/Subaru-PFS/ets_fiberalloc.git
+Branch: DETACHED
+Commit: 2248bf8
+Exact tag at HEAD: v3.8
+
+=== pfs_instdata (/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_instdata) ===
+PWD: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_instdata
+Remote: https://github.com/Subaru-PFS/pfs_instdata.git
+Branch: DETACHED
+Commit: 434af74
+Exact tag at HEAD: 1.8.88
+
+Git tag verification failures: 0
+
+=========================================================
+Running import_modules.py
+CWD before run: /lustre/work/jingjing.shi/subaru_netflow_env
+Environment snapshot:
+  PATH=/home/jingjing.shi/anaconda3/envs/netflow-base-2026-07/bin:/home/jingjing.shi/.pyenv/shims:/home/jingjing.shi/.pyenv/bin:/home/jingjing.shi/local/node20/bin:/usr/bin:/home/jingjing.shi/hdf5/bin:/home/jingjing.shi/.pyenv/plugins/pyenv-virtualenv/shims:/home/jingjing.shi/.pyenv/bin:/opt/intel/psxe2018/compilers_and_libraries_2018.5.274/linux/mpi/intel64/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/bin/intel64:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:/opt/intel/psxe2019/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:/opt/intel/psxe2019/debugger_2019/gdb/intel64/bin:/opt/local/bin:/home/anaconda3/condabin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/opt/pbs/bin:/opt/intel/psxe2019/parallel_studio_xe_2019.5.075/bin:/usr/bin
+  CONDA_PREFIX=/home/jingjing.shi/anaconda3/envs/netflow-base-2026-07
+  PFS_INSTDATA_DIR=/lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_instdata
+Python 3.12.11
+[OK] numpy
+   path: /home/jingjing.shi/anaconda3/envs/netflow-base-2026-07/lib/python3.12/site-packages/numpy/__init__.py
+   version: 2.3.3
+------------------------------------------------------------
+[OK] ics.cobraOps
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraOps/python/ics/cobraOps/__init__.py
+   version: 2.0.7
+------------------------------------------------------------
+[OK] pfs.utils
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/pfs_utils/python/pfs/utils/__init__.py
+------------------------------------------------------------
+[OK] ics.cobraCharmer
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ics_cobraCharmer/python/ics/cobraCharmer/__init__.py
+------------------------------------------------------------
+[OK] pfs.datamodel
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/datamodel/python/pfs/datamodel/__init__.py
+   version: unknown
+------------------------------------------------------------
+[OK] ets_fiber_assigner
+   path: /lustre/work/jingjing.shi/Subaru-PFS/.worktrees/sep2026/ets_fiberalloc/ets_fiber_assigner/__init__.py
+   version: 3.8.0
+------------------------------------------------------------
+[OK] opdb
+   path: /home/jingjing.shi/anaconda3/envs/netflow-base-2026-07/lib/python3.12/site-packages/opdb/__init__.py
+------------------------------------------------------------
+All required modules imported successfully.
+import_modules.py exit code: 0
+=== END 2026-08-04T11:29:09+0900 ===

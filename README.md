@@ -124,7 +124,7 @@ worktrees, so every repo uses the same one. Each repo keeps only its own
 
 ```bash
 # create the frozen base directly in a team-readable envs dir + record locks
-conda activate netflow-env
+source /lustre/work/jingjing.shi/setup_netflow_env.sh
 CONDA_ENVS_ROOT=/home/jingjing.shi/anaconda3/envs \
     bash "$NETFLOW_ENV_DIR/freeze_base_env.sh" 2026-07
 bash "$NETFLOW_ENV_DIR/strip_pfs_from_base.sh" 2026-07   # if PFS modules leaked in
@@ -133,7 +133,7 @@ bash "$NETFLOW_ENV_DIR/strip_pfs_from_base.sh" 2026-07   # if PFS modules leaked
 ## Check whether the base drifted (before a new run)
 
 ```bash
-conda activate netflow-env
+source /lustre/work/jingjing.shi/setup_netflow_env.sh
 bash "$NETFLOW_ENV_DIR/freeze_base_env.sh" --check 2026-07
 ```
 

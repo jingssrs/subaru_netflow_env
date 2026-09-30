@@ -1,0 +1,20 @@
+# nov2026 environment manifest
+# Source of tags: https://github.com/Subaru-PFS/spt_ssp_observation/blob/2026-11/runs/2026-11/config.yaml
+#
+# To run this run:
+#   bash   "$NETFLOW_ENV_DIR/make_run_worktrees.sh" nov2026
+#   source "$NETFLOW_ENV_DIR/activate_run.sh" nov2026
+#   bash   "$NETFLOW_ENV_DIR/verify_modules.sh" --runname 'nov2026'
+#
+# base_env: name of the shared frozen conda env this run runs against.
+#   NOTE: freeze it once with  bash "$NETFLOW_ENV_DIR/freeze_base_env.sh" 2026-07
+#   (this was the live 'netflow-env' state as of the july2026 run).
+base_env            netflow-base-2026-07
+#
+# module            git-tag
+datamodel           w.2026.39
+pfs_utils           w.2026.39
+ics_cobraOps        v2.0.9
+ics_cobraCharmer    1.5.12
+ets_fiberalloc      v3.9
+pfs_instdata        1.8.97
